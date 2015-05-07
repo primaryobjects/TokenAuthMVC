@@ -36,7 +36,7 @@
 
         $.get('/api/find?q=' + query + '&token=' + SecurityManager.generate(), function (data) {
             var names = data.join(', ');
-            $("#result").text(names);
+            $("#result").append('<p>' + names + '</p>');
         }).fail(function (error) {
             alert('HTTP Error ' + error.status);
         });
