@@ -52,7 +52,7 @@ namespace TokenAuthMVC.Managers
         }
 
         /// <summary>
-        /// Returns a hashed password + ip + salt, to be used in generating a token.
+        /// Returns a hashed password + salt, to be used in generating a token.
         /// </summary>
         /// <param name="password">string - user's password</param>
         /// <returns>string - hashed password</returns>
