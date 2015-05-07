@@ -5,6 +5,12 @@ using TokenAuthMVC.Managers;
 
 namespace TokenAuthMVC.Attributes
 {
+    /// <summary>
+    /// Token-based authentication for ASP .NET MVC REST web services.
+    /// Copyright (c) 2015 Kory Becker
+    /// http://primaryobjects.com/kory-becker
+    /// License MIT
+    /// </summary>
     public class RESTAuthorizeAttribute : AuthorizeAttribute
     {
         private const string _securityToken = "token";
