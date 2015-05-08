@@ -97,7 +97,7 @@ namespace TokenAuthMVC.Managers
                     DateTime timeStamp = new DateTime(ticks);
 
                     // Ensure the timestamp is valid.
-                    bool expired = timeStamp > DateTime.UtcNow || DateTime.UtcNow - timeStamp > TimeSpan.FromMinutes(_expirationMinutes);
+                    bool expired = Math.Abs((DateTime.UtcNow - timeStamp).TotalMinutes) > _expirationMinutes;
                     if (!expired)
                     {
                         //
