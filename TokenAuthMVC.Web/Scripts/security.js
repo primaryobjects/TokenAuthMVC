@@ -35,7 +35,7 @@ var SecurityManager = {
         var ticks = ((new Date().getTime() * 10000) + 621355968000000000);
 
         // Construct the hash body by concatenating the username, ip, and userAgent.
-        var message = [SecurityManager.username, SecurityManager.ip, navigator.userAgent, ticks].join(':');
+        var message = [SecurityManager.username, SecurityManager.ip, navigator.userAgent.replace(/ \.NET.+;/, ''), ticks].join(':');
 
         // Hash the body, using the key.
         var hash = CryptoJS.HmacSHA256(message, SecurityManager.key);
